@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .background-image
+        {
+            background-image: url("my pictures/Section (4).png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+        }
+        .header-first
+        {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 150px;
+            background: black;
+            align-items: center;
+        }
+        .header-first input
+        {
+            height: 30px;
+            padding: 15px;
+            font-size: 12px;
+            background: #FFFFFF1A;
+            border: 1px solid #FFFFFF4D;
+            width: 250px;
+
+        }
+        .header-second
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #FFFFFF;
+            max-width: 70%;
+            margin: 10px auto;
+
+        }
+        .header-second ul
+        {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            font-family: Helvetica;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 10.69px;
+            line-height: 40px;
+            letter-spacing: 0.96px;
+            text-align: center;
+
+        }
+        .two-icons
+        {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .discover
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        .discover h1
+        {
+            font-family: 'Inter',sans-serif;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 32px;
+            line-height: 56px;
+            letter-spacing: 0%;
+        }
+        .discover ul
+        {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            font-family: 'Inter',sans-serif;
+            font-weight: 600;
+            font-style: Semi Bold;
+            font-size: 9px;
+            line-height: 16px;
+            letter-spacing: 0.5px;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-thickness: 0%;
+            text-decoration-skip-ink: auto;
+
+        }
+        .container
+        {
+            max-width: 75%;
+            margin: 30px auto;
+            
+        }
+        .multiple-images
+        {
+            display: flex;
+            gap: 15px;
+            justify-content: space-between;
+        }
+        .image-one 
+        {
+            font-family: 'Inter',sans-serif;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 0%;
+            
+
+
+        }
+        .third-slide
+        {
+            display: flex;
+        }
+        .right-content
+        {
+            padding: 40px;
+            background: #F6F6F3;
+
+        }
+        .right-content h1
+        {
+            font-family: 'Inter',sans-serif;
+font-weight: 500;
+font-style: Medium;
+font-size: 40px;
+line-height: 56px;
+
+
+
+        }
+        .right-content p
+        {
+            font-family: 'Inter',sans-serif;
+            font-weight: 100;
+            font-style: Regular;
+            font-size: 11px;
+            line-height: 20px;
+            letter-spacing: 0%;
+            padding-top: 12px;
+
+        }
+        .four-images
+        {
+            display: flex;
+            gap: 20px;
+        }
+        .view
+        {
+            font-family: 'Inter' sans-serif;
+            font-weight: 600;
+            font-style: Semi Bold;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.5px;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            color: #09090A;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+        }
+        .image-one p
+        {
+            font-family: 'Inter',sans-serif;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 0%;
+
+        }
+        .footer-line
+        {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            background: #796F51;
+            height: 50px;
+        }
+        .footer-line p{
+            font-family: 'Inter',sans-serif;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 10.5px;
+            line-height: 28px;
+            letter-spacing: 0%;
+            color: #FFFFFF;
+
+
+        }
+        .inner-footerline
+        {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .inner-images img
+        {
+            background-color: #FFFFFF;
+            border: 1px solid #0000001A;
+            padding: 10px;
+        }
+        .inner-images p
+        {
+            font-family: 'Inter',sans-serif;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+        .left-image
+        {
+            width: 50%;
+
+        }
+        .left-image img
+        {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .inner-divs
+        {
+            display: flex;
+            align-items: center; 
+            gap: 8px;
+             border-width: 1px, 0px, 1px, 0px;
+
+            border-style: solid;
+
+            border-color: #0000001A;
+             padding-top: 12px;
+            padding-bottom: 12px;
+
+
+
+                   }
+        .fourth-slide
+        {
+            background: #F6F6F3;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            padding: 50px 150px;
+             align-items: center;
+
+        }
+        .inner-divs img
+        {
+            background: #FFFFFF;
+            border: 1px solid #0000001A;
+            padding: 10px;
+        }
+        .second-div
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-color: #0000001A;
+        }
+        .first-div
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .first-div h2
+        {
+            font-family: 'Inter',sans-serif;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 30px;
+
+        }
+        h2 span
+        {
+            display: block;
+        }
+        .inner-divs h4
+        {
+         font-family: 'Inter',sans-serif;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 16px;
+            
+        }
+        .inner-divs p{
+            font-family: 'Inter',sans-serif;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 13px;
+            line-height: 18px;
+            word-spacing: 10px;
+            padding-right: 10px;
+
+        }
+        .fifth-slide h1
+        {
+            padding-left: 95px;
+            font-family: 'Plus Jakarta Sans',sans-serif;
+            font-weight: 500;
+            font-style: Medium;
+            line-height: 48px;
+
+        }
+        .five-images
+        {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .coffee-tables
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .coffee
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .coffee-tables
+        {
+            font-family: 'Plus Jakarta Sans',sans-serif;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 14px;
+            line-height: 20px;
+
+
+        }
+        .background-image-two
+        {
+            background-image: url("my pictures/07b06e0f713eedb7699faef47f002056582b8914.jpg");
+             background-size: cover;
+            background-position: center;
+            height: 80vh;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 30px;
+        }
+        .three-cards
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding-left: 13px;
+        }
+        .three-cards-parent
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #FFFFFFD1;
+            box-shadow: 0px 0px 25px 0px #00000026;
+            padding: 20px;
+            max-width:85%;
+            
+
+
+            
+        }
+        .numeric-value 
+        {
+            display: flex;
+            gap: 10px;
+        }
+        .Modern-design
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        .Modern 
+        {
+            font-family: 'Inter',sans-serif;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 11px;
+            line-height: 28px;
+            letter-spacing: 0%;
+            color: #09090A;
+
+
+
+        }
+        .numeric-one 
+        {
+            font-family: 'Inter',sans-serif;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 7px;
+            line-height: 28px;
+            color: #09090A;
+
+
+        }
+        .numeric-two 
+        {
+            font-family: 'Inter',sans-serif;
+            font-weight: 400;
+            font-style: Regular;
+           font-size: 7px;
+           line-height: 28px;
+           text-decoration: line-through;
+        color: #666565;
+        }
+        .seventh-slide
+        {
+        
+            padding: 30px 150px;
+        }
+        .seventh-slide h1
+        {
+            font-family: 'Inter',sans-serif;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 30px;
+            line-height: 56px;
+            text-align: center;
+
+        }
+        .parent-div
+        {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .blogs
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .authers-image
+        {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .authers-image img
+        {
+            background: #FFFFFF;
+        }
+        .explore
+        {
+        font-family: 'Inter',sans-serif;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 15px;
+        line-height: 25px;
+        color: #09090A;
+
+        }
+        .laila
+        {
+            font-family: 'Inter',sans-serif;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 12px;
+            line-height: 28px;
+            color: #09090A;
+
+
+        }
+        .date
+        {
+            font-family: 'Inter',sans-serif;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 12px;
+            line-height: 28px;
+            color: #666565;
+
+        }
+        .footer-second p
+        {
+            font-family: 'Plus Jakarta Sans',sans-serif;
+            font-weight: 400;
+            font-size: 10px;
+            color: #FCFCFC;
+
+        }
+        .footer-second
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background:  #0D0D0D;
+;
+        }
+        .footer-image
+        {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+        }
+        .footer-image img
+        {
+            background: #FCFCFC;
+            border-radius: 1px;
+            padding: 5px;
+        }
+        .footer-icons1
+        {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .footer-icons2
+        {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .footer-first
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background: #F9F9FB;
+
+        }
+        .footer-f
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-f h2
+        {
+            font-family: 'Plus Jakarta Sans',sans-serif;
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 16px;
+
+        }
+        .footer-f ul
+        {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-family: 'Plus Jakarta Sans',sans-serif;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 12px;
+            line-height: 24px;
+
+        }
+        .footer-f1
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .footer-f1 input
+        {
+            padding: 5px;
+        }
+        .button
+        {
+            display: flex;
+        }
+        .button button
+        {
+            border: 1px solid #35736E;
+            background: #35736E;
+            padding: 5px 4px;
+            color: #FFFFFF;
+
+        }
+        .same-line
+        {
+            display: flex;
+            gap: 50px;
+        }
+        .footer-f1 p
+        {
+            font-family: 'Plus Jakarta Sans',sans-serif;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 23px;
+
+        }
+        
+
+
+    
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <div class="header-first">
+            <input type="text" placeholder="Search">
+            <div class="two-icons">
+                <img src="my pictures/Container (12).png">
+                <img src="my pictures/Container (13).png">
+            </div>
+
+        </div>
+        <div class="header-second">
+            <ul>
+                <li>NEW</li>
+                <li>SHOP</li>
+                <li>RENT</li>
+                <li>PACKAGES</li>
+                <li>INTERIOR IDEAS</li>
+            </ul>
+            <h2>FURNITURE</h2>
+            <ul>
+                <li>ABOUT US</li>
+                <li>BLOG</li>
+                <li>CONTACT US</li>
+            </ul>
+
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="discover">
+        <h1>Discover more for you</h1>
+        <ul>
+            <li>ALL</li>
+            <li>/</li>
+            <li>BEST SELLING</li>
+            <li>/</li>
+            <li>NEW ARRIVAL</li>
+        </ul>
+        </div>
+        <div class="multiple-images">
+            <div class="image-one">
+                <img src="my pictures/Container (14).png" height="240px" width="220px">
+                <p>Curve floor lamps</p>
+            </div>
+            <div class="image-one">
+                <img src="my pictures/Container (15).png" height="240px" width="220px">
+                <p>Designer wooden chair</p>
+            </div>
+            <div class="image-one">
+                <img src="my pictures/Container (16).png" height="240px" width="220px">
+                <p>Furniture wooden floor lamp</p>
+            </div>
+            <div class="image-one">
+                <img src="my pictures/Container (19).png" height="240px" width="220px">
+                <p>Furniture wooden sideboard</p>
+            </div>
+
+        </div>
+        <div class="multiple-images">
+            <div class="image-one">
+                <img src="my pictures/Product image (1).png" height="240px" width="220px">
+                <p>Handicraft wooden chairs</p>
+            </div>
+            <div class="image-one">
+                <img src="my pictures/Container (18).png" height="240px" width="220px">
+                <p>Home furniture wooden sofa</p>
+            </div>
+            <div class="image-one">
+                <img src="my pictures/Product image (2).png" height="240px" width="220px">
+                <p>Low height masterbed</p>
+            </div>
+            <div class="image-one">
+                <img src="my pictures/Product image (3).png" height="240px" width="220px">
+                <p>Maharaja style round table</p>
+            </div>
+
+        </div>
+    </div>
+    <div  class="third-slide">
+        <img src="my pictures/1d604f445c09b5395d1056aae3b7e4f14094c3db.png"  width="50%" >
+        <div class="right-content">
+            <h1>Premium quality designs created for your home</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligulaeget dolor. Aenean massa. Cum sociis natoque penatibus et magnis disparturient montes</p>
+                 <div class="view">VIEW ALL CATEGORIES</div>
+                 <div class="four-images">
+                    <div class="inner-images">
+                 <img src="my pictures/Vector.png">
+                 <p>Chair</p>
+                 </div>
+                 <div class="inner-images">
+                 <img src="my pictures/Vector (1).png">
+                 <p>Lamp</p>
+                 </div>
+                 <div class="inner-images">
+                 <img src="my pictures/Vector (3).png">
+                 <p>Sofa</p>
+                 </div>
+                 <div class="inner-images">
+                 <img src="my pictures/Vector (2).png">
+                 <p>Table</p>
+                 </div>
+                 </div>
+        </div>
+    </div>
+    <div class="footer-line">
+        <div class="inner-footerline">
+        <p>Embraces eclectic stylesand natural materials</p>
+        <img src="my pictures/icon (9).png"  height="12px" width="12px">
+        </div>
+        <div class="inner-footerline">
+        <p>Embraces eclectic stylesand natural materials</p>
+        <img src="my pictures/icon (9).png"  height="12px" width="12px">
+        </div>
+        <div class="inner-footerline">
+        <p>Embraces eclectic stylesand natural materials</p>
+        <img src="my pictures/icon (9).png"  height="12px" width="12px">
+        </div>
+        <div class="inner-footerline">
+        <p>Embraces eclectic stylesand natural materials</p>
+        <img src="my pictures/icon (9).png"  height="12px" width="12px">
+        </div>
+        <div class="inner-footerline">
+        <p>Embraces eclectic stylesand natural materials</p>
+        <img src="my pictures/icon (9).png"  height="12px" width="12px">
+        </div>
+    </div>
+    <div class="fourth-slide">
+        <div class="first-div">
+            <h2>Best services that<span> we have</span></h2>
+            <img src="my pictures/single image.png" width="280px" height="240px">
+        </div>
+        <div class="second-div">
+            <div class="inner-divs">
+                <img src="my pictures/icon (7).png" height="65px" width="65px">
+                <div>
+                <h4>Available to you 24/7</h4>
+                <p>Lorem ipsum dolor sit ametconsectetur praesent</p>
+                </div>
+            </div>
+            <div class="inner-divs">
+                <img src="my pictures/67dcef5aadfec7b7aa8aae95_free.svg.png" height="65px" width="65px">
+                <div>
+                <h4>Free shipping</h4>
+                <p>Lorem ipsum dolor sit ametconsectetur praesent</p>
+                </div>
+            </div>
+            <div class="inner-divs">
+                <img src="my pictures/67dcef5aaddb4bcdcc5dbcd9_extend.svg fill.png" height="65px" width="65px">
+                <div>
+                <h4>Extended warranty plans</h4>
+                <p>Lorem ipsum dolor sit ametconsectetur praesent</p>
+                </div>
+            </div>
+        </div>
+        <div class="third-div">
+            <img src="my pictures/single image (1).png" width="280px" height="330px">
+
+        </div>
+    </div>
+    <div class="fifth-slide">
+        <h1>More to Explore</h1>
+        <div class="five-images">
+            <div class="coffee">
+            <img src="my pictures/Link → Sofas & Sectionals.png" height="240px" width="220px">
+            <div class="coffee-tables">
+                <p>Cofee tables</p>
+                <img src="my pictures/Vector (4).png">
+            </div>
+            </div>
+            <div class="coffee">
+            <img src="my pictures/Link → Dining Chairs (1).png" height="240px" width="220px">
+            <div class="coffee-tables">
+                <p>Chairs</p>
+                <img src="my pictures/Vector (4).png">
+            </div>
+            </div>
+               <div class="coffee">
+            <img src="my pictures/Link → Desks.png" height="240px" width="220px">
+            <div class="coffee-tables">
+                <p>Desk</p>
+                <img src="my pictures/Vector (4).png">
+                </div>
+               </div>
+  
+            <div class="coffee">
+            <img src="my pictures/Link → Beds.png" height="240px" width="220px">
+            <div class="coffee-tables">
+                <p>Bed</p>
+                <img src="my pictures/Vector (4).png">
+                </div>
+                </div>
+             <div class="coffee">
+            <img src="my pictures/Link → Dining Chairs.png" height="240px" width="110px">
+<div class="coffee-tables">
+                <p>Chairs</p>
+                <img src="my pictures/Vector (4).png">
+                </div>
+                </div>
+  
+        </div>
+
+    </div>
+    <div class="background-image-two">
+        <div class="three-cards-parent">
+        <div class="three-cards">
+            <img src="my pictures/Container (20).png" height="120px" width="100px">
+            <div class="Modern-design">
+            <p>Wooden Dining table</p>
+            <div class="numeric-value">
+                <p class="numeric-one">$ 436.00 USD</p>
+            <p class="numeric-two">$ 452.00 USD</p>
+            </div>
+
+            </div>
+
+        </div>
+        <div class="three-cards">
+            <img src="my pictures/product image (4).png" height="120px" width="100px">
+            <div class="Modern-design">
+            <p>Low hight masterbed</p>
+            <div class="numeric-value">
+                <p class="numeric-one">$ 1540.00 USD</p>
+                <p class="numeric-two">$ 1680.00 USD</p>
+            </div>
+            </div>
+         </div>
+         <div class="three-cards">
+                <img src="my pictures/product image (5).png" height="120px" width="100px">
+                <div class="Modern-design">
+                <p class="modern">Modern design bench</p>
+                <div class="numeric-value">
+                    <p class="numeric-one">$ 2840.00 USD</p>
+                    <p class="numeric-two">$ 3200.00 USD</p>
+                </div>
+                </div>
+            </div>
+
+ </div>
+    
+
+    </div>
+    <div class="seventh-slide">
+        <h1>Our latest news and articles</h1>
+        <div class="parent-div">
+        <div class="blogs">
+        <img src="my pictures/blog image.png" height="200px" width="300px">
+        <p class="explore">Explore the intersection of contemporary and classic furniture</p>
+        <div class="authers-image">
+            <img src="my pictures/blog authers image.png">
+            <p class="laila">Laila</p>
+            <p class="date">February 20, 2025</p>
+        </div>
+        </div>
+        <div class="blogs">
+        <img src="my pictures/blog image (1).png" height="200px" width="300px">
+        <p class="explore">Discover the power of furniture in creating unforgettable rooms</p>
+        <div class="authers-image">
+            <img src="my pictures/blog authers image (1).png">
+            <p class="laila">Ethen</p>
+            <p class="date">January 12, 2025</p>
+        </div>
+        </div>
+        <div class="blogs">
+        <img src="my pictures/blog image (2).png" height="200px" width="300px">
+        <p class="explore">Choosing the perfect furniture for every room in your home</p>
+        <div class="authers-image">
+            <img src="my pictures/blog authers image (2).png">
+        <p class="laila">Natalie</p>
+        <p class="date">December 27, 2024</p>
+    
+        </div>
+        </div>
+        </div>
+        
+    </div>
+    <div class="footer-first">
+        <div class="footer-f1">
+            <img src="my pictures/Furniture (9).png">
+        <p>Stay Inspired</p>
+        <div class="button">
+        <input type="text" placeholder="Enter your email">
+        <button>Subscribe</button>
+        </div>
+
+        </div>
+        <div class="same-line">
+        <div  class="footer-f">
+            <h2>Explore</h2>
+        <ul>
+            <li>Shop</li>
+            <li>Package Design</li>
+            <li>Custom Design</li>
+            <li>Book Consultation</li>
+            <li>Blog</li>
+            <li>About us</li>
+        </ul>
+        </div>
+        <div class="footer-f">
+            <h2>Support</h2>
+            <ul>
+            <li>Contact Us</li>
+            <li>FAQs</li>
+            <li>Delivery & Returns</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            </ul>
+        </div>
+        <div class="footer-f">
+            <h2>Connect</h2>
+            <div class="footer-icons1">
+                <img src="my pictures/Vector (5).png">
+                <p>+1 - 202 - 555 - 0153</p>
+            </div>
+            <div class="footer-icons2">
+                <img src="my pictures/Vector (6).png">
+                <p>furniture@gmail.com</p>
+            </div>   
+            <div class="footer-icons3">
+                <img src="my pictures/Facebook (1).png" >
+                <img src="my pictures/Instagram (1).png" alt="">
+                <img src="my pictures/Twitter.png" alt="">
+                <img src="my pictures/Linkedin.png" alt="">
+            </div>  
+            </div>   
+        </div>
+    </div>
+    <div class="footer-second">
+        <p>Copyright @ 2025 furniture, All rights reserved.</p>
+        <div class="footer-image">
+            <img src="my pictures/pngwing 67.png" height="25px" width="64px">
+            <img src="my pictures/pngwing 68.png" height="25px" width="64px">
+            <img src="my pictures/pngwing 70.png" height="25px" width="64px">
+            <img src="my pictures/pngwing 71.png" height="25px" width="64px">
+            <img src="my pictures/pngwing 72.png" height="25px" width="64px" >
+
+        </div>
+    </div>
+    
+
+    
+
+    
+</body>
+</html>
